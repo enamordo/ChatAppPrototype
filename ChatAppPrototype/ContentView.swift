@@ -2,8 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        TabView{
+
+        TabView {
             Text("Tab Content1")
                 .tabItem {
                     Label("つぶやく", systemImage: "bubble.right")
@@ -23,7 +23,7 @@ struct ContentView: View {
                     Label("設定/ヘルプ", systemImage: "gearshape.2")
                 }
         }
-        
+
     }
 }
 
