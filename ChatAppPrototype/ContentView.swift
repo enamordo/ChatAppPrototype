@@ -2,56 +2,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         TabView{
-            FirstPage()
+            Text("Tab Content1")
                 .tabItem {
                     Label("つぶやく", systemImage: "bubble.right")
+                        .foregroundColor(.red)
                 }
-            SecondPage()
+            Text("Tab Content2")
+                .badge(/*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .tabItem {
                     Label("やりとり", systemImage: "envelope.fill")
                 }
-            ThirdPage()
+            Text("Tab Content3")
                 .tabItem {
                     Label("タイムライン", systemImage: "bubble.left.and.bubble.right")
                 }
-            FourthPage()
+            Text("Tab Content4")
                 .tabItem {
                     Label("設定/ヘルプ", systemImage: "gearshape.2")
                 }
         }
-    }
-}
-
-struct FirstPage: View {
-    var body: some View {
-        Text("1枚目")
-            .font(.title)
-            .foregroundColor(.green)
-    }
-}
-
-struct SecondPage: View {
-    var body: some View {
-        Text("2枚目")
-            .font(.title)
-            .foregroundColor(.green)
-    }
-}
-
-struct ThirdPage: View {
-    var body: some View {
-        Text("3枚目")
-            .font(.title)
-            .foregroundColor(.green)
-    }
-}
-
-struct FourthPage: View {
-    var body: some View {
-        Text("4枚目")
-            .font(.title)
-            .foregroundColor(.green)
+        
     }
 }
 
