@@ -4,7 +4,7 @@ struct ContentView: View {
     var body: some View {
 
         TabView {
-            Text("Tab Content1")
+            TweetView()
                 .tabItem {
                     Label("つぶやく", systemImage: "bubble.right")
                         .foregroundColor(.red)
@@ -24,6 +24,34 @@ struct ContentView: View {
                 }
         }
 
+    }
+}
+
+struct TweetView: View {
+    // つぶやきをUserDefaultsで保存
+    @AppStorage("consumptionTaxRate") var tweetDraft = ""
+
+    var body: some View {
+        VStack {
+            TextField("テキストフィールド", text: $tweetDraft)
+                .padding()
+                .frame(width: 380.0, height: 200.0)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.red, lineWidth: 3)
+                )
+            HStack {
+                Spacer()
+                Button("入力完了") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                .padding()
+                .foregroundColor(.red)
+                .background(.green)
+                .border(.black, width: 3)
+            }
+
+        }
     }
 }
 
